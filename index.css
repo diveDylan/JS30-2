@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clock-wrap {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+}
+.clock-wrap div {
+    transform-origin: right center;
+    position: absolute;
+}
+.hour-line {
+    width: 60px;
+    height: 4px;
+    top: 98px;
+    left: 40px;
+    background: #21ff0091;
+    border-radius:4px;
+}
+
+.minute-line {
+    width: 70px;
+    height: 3px;
+    top: 98.5px;
+    left: 30px;
+    background: #0cb152;
+    border-radius:3px;
+}
+.second-line {
+    width: 80px;
+    height: 2px;
+    top: 99px;
+    left: 20px;
+    background: #000;
+    border-radius: 2px;
+}

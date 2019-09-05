@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js30-2</title>
+        <link rel="stylesheet" href="./index.css">
+        
+    </head>
+    <body>
+        <div class="clock-wrap">
+            <div class="hour-line"></div>
+            <div class="minute-line"></div>
+            <div class="second-line"></div>
+        </div>
+        <script>
+            const hEl = document.querySelector('.hour-line')
+            const mEl = document.querySelector('.minute-line')
+            const sEl = document.querySelector('.second-line')
+            function setDate(hEl, mEl, sEl) {
+                
+                return () => {
+                    // maybe need cache
+                    const d = new Date()
+                    console.log('clock...')
+                    const hDeg = (d.getHours()) / 24 * 360 - 90
+                    const mDeg = (d.getMinutes()) / 60 * 360 - 90
+                    const sDeg = (d.getSeconds()) / 60 * 360 - 90
+                    hEl.style.transform = `rotate(${hDeg}deg)`
+                    mEl.style.transform = `rotate(${mDeg}deg)`
+                    sEl.style.transform = `rotate(${sDeg}deg)`
+                }
+                
+            }
+            setInterval(setDate(hEl, mEl, sEl), 1000)
+        </script>
+    </body>
+</html>
